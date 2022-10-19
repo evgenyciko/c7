@@ -1,0 +1,17 @@
+<!-- berisi list postingan -->
+<div class="col-md-10 p-5">
+  <h3><%= judul %></h3>
+  <hr />
+  <% for(var i=0; i < users.length; i++) { %> <% for(var j=0; j < users[i].history.length; j++) { %>
+  <div class="row text-white pt-3">
+    <div class="card bg-dark" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title text-danger"><%= users[i].username %></h5>
+        <div class="display-6 fw-bold"><%= users[i].history[j].post %></div>
+      </div>
+    </div>
+  </div>
+
+  <% } %> 
+  <% } %>
+</div>

@@ -1,0 +1,31 @@
+<div class="col-md-5 p-5">
+  <h3><%= judul %></h3>
+  <hr />
+
+  <div class="container">
+    <div class="row text-white">
+      <div class="card bg-info" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Jumlah Pengguna</h5>
+          <div class="display-4 fw-bold"><%= pengguna.length %></div>
+          <a href="/listUser">
+            <p class="card-text text-white">Lihat detail</p>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <% let hit=0 %> <% for(var i=0; i < pengguna.length; i++) { %> <% for(var j=0; j < pengguna[i].history.length; j++) { %> <% hit++ %> <% } %> <% } %>
+      <div class="row text-white">
+        <div class="card bg-info" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Jumlah Postingan</h5>
+            <div class="display-4 fw-bold"><%= hit %></div>
+            <a href="/posts">
+              <p class="card-text text-white">Lihat detail</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

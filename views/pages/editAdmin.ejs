@@ -1,0 +1,13 @@
+<div class="col-md-10 p-5">
+  <h3><%= judul %></h3>
+  <hr />
+  <a href="/admin" class="btn btn-primary" style="float: right">back</a>
+
+  <form action="/editAdmin/ <%= user.id %>" method="POST">
+    <label for="exampleInputName1" class="form-label">Username</label>
+    <input type="text" name="username" class="form-control" value="<%= user.username %>" />
+    <label for="exampleInputPassword1" class="form-label mt-3">Password</label>
+    <input type="password" name="password" class="form-control" />
+    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+  </form>
+</div>

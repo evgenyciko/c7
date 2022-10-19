@@ -1,0 +1,28 @@
+<div class="col-md-10 p-5">
+  <h3><%= judul %></h3>
+  <hr />
+  <a href="/register" class="btn btn-primary" style="float: right">Add Admin</a>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="text-center">
+        <th class="col-md-1" scope="col">No</th>
+        <th class="col-md-4" scope="col">username</th>
+        <th class="col-md-2" colspan="2" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i=0; i < users.length; i++) { %>
+      <tr>
+        <th class="text-center" scope="row"><%= i+1 %></th>
+
+        <td><%= users[i].username %></td>
+
+        <td class="text-center">
+          <a href="/editAdmin/<%= users[i].id %>" class="btn btn-success">Edit</a>
+          <a href="/delete/<%= users[i].id %>" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
